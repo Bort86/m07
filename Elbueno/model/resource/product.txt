@@ -1,0 +1,7 @@
+1;aino;1;hello;1
+2;pablo;2;fdskaljl;
+3;eva;3;fdpaj;2
+4;carlos;4;fkdoako;3
+5;chelo;346;;1
+12;dec;1,3;;
+123;enter;123;;

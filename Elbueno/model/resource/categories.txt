@@ -1,0 +1,4 @@
+1;Cosmetic
+2;Health
+3;Amor
+4;new

@@ -1,0 +1,22 @@
+RewriteEngine On
+ 
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+#rules as web app
+RewriteRule ^([a-zA-Z]+)/list$ index.php?menu=$1&option=list_all
+RewriteRule ^([a-zA-Z]+)/add$ index.php?menu=$1&option=form_add
+RewriteRule ^([a-zA-Z]+)/modify$ index.php?menu=$1&option=form_modify
+RewriteRule ^([a-zA-Z]+)/delete$ index.php?menu=$1&option=form_modify
+
+#Rules working as web service:
+# amb GET - list all
+# amb POST - insert
+# amb PUT - update
+RewriteRule ^([a-zA-Z]+)/?$ service.php?object=$1
+# amb GET - search by id
+# amb DELETE - delete
+RewriteRule ^([a-zA-Z_]+)/(([0-9])+)/?$ service.php?object=$1&id=$2

@@ -1,0 +1,2 @@
+Pablo;bort;24;Basic;1
+Pablo;bort;27;Advanced;0
